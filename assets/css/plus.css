@@ -1,0 +1,230 @@
+/*
+--------- Social ichons 
+*/
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+}
+.social-icons li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+  font-size: 1.2em;
+}
+.social-icons i {
+  margin-left: -13px;
+  color: #fff;
+  position: absolute;
+  top: 16px;
+  left: 15px;
+  transition: all 265ms ease-out;
+}
+.social-icons .git-left{
+  margin-left: -14px;
+}
+.social-icons a {
+  margin-right: 20px;
+  margin-left: -10px;
+  display: inline-block;
+}
+.social-icons a:before {
+  margin-top: 5px;
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #00B5F5, #002A8F);
+  transition: all 265ms ease-out;
+}
+.social-icons a:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+.social-icons a:hover i {
+  transform: scale(2.2);
+  -ms-transform: scale(2.2);
+  -webkit-transform: scale(2.2);
+  color: #00B5F5;
+  background: -webkit-linear-gradient(45deg, #00B5F5, #002A8F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
+
+
+  
+/*
+  ----- Index html name breath
+*/
+.flas {
+  background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, rgb(38, 109, 175), transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 47px;
+  font-family: "Source Sans Pro", sans-serif;
+  -webkit-animation: reveal 2700ms ease-in-out forwards 200ms, glow 5500ms linear infinite 2000ms;
+          animation: reveal 2700ms ease-in-out forwards 200ms, glow 5500ms linear infinite 2000ms;
+}
+@-webkit-keyframes reveal {
+  80% {
+    letter-spacing: 0px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+@keyframes reveal {
+  80% {
+    letter-spacing: 0px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+@-webkit-keyframes glow {
+  40% {
+    text-shadow: 0 0 0px rgb(19, 187, 253);
+  }
+}
+@keyframes glow {
+  40% {
+    text-shadow: 0 0 0px rgb(19, 187, 253);
+  }
+}
+
+
+
+
+/*
+---------------------- Head link style ----------------
+*/
+
+.sm-link{
+  --uismLinkDisplay: var(--smLinkDisplay, inline-flex);	
+  --uismLinkTextColor: var(--smLinkTextColor);
+  --uismLinkTextColorHover: var(--smLinkTextColorHover);	
+  
+  display: var(--uismLinkDisplay);
+  color: var(--uismLinkTextColor);
+  position: relative;
+  overflow: hidden;
+}
+
+a.sm-link{  
+  text-decoration: none;
+}
+
+.sm-link__label{
+  display: block;
+}
+
+
+/* sm-link_bg */ 
+
+.sm-link_bg {
+  border-radius: 5px / 3px;
+  --uismLinkLineColor: var(--smLinkLineColor, #000);	
+  --uismLinkTextColorHover: var(--smLinkTextColorHover, #fff);	
+  --uismLinkPadding: var(--smLinkPadding, 5px);
+  
+  padding: var(--uismLinkPadding);
+  transition: color .3s ease-out;
+}
+
+.sm-link_bg::before, 
+.sm-link_bg::after{
+  content: "";
+  background-color: var(--uismLinkLineColor);	
+  opacity: 0;
+  position: absolute;
+  
+  transition: transform .2s ease-out, opacity .2s ease-out .3s;
+}
+
+.sm-link_bg .sm-link__label{
+  position: relative;
+  z-index: 1;
+}
+
+.sm-link_bg:hover::before, 
+.sm-link_bg:hover::after{
+  opacity: 0.3;
+  transition-duration: .15s, .15s;
+  transition-delay: 0s, 0s;
+}
+
+.sm-link_bg:hover{
+  color: var(--uismLinkTextColorHover);
+}
+
+/* effect 9 */
+
+.sm-link9::before,
+.sm-link9::after{
+  width: 50%;
+  height: 100%;
+  top: 0;
+}
+
+.sm-link9::before{
+  left: 0;
+  transform: translate3d(-80%, -100%, 0);
+}
+
+.sm-link9::after{
+  right: 0;
+  transform: translate3d(80%, 100%, 0);
+}
+
+.sm-link9:hover::before,.sm-link9:hover::after{
+  transform: translate3d(0,0,0);  
+}
+
+/*
+SETTINGS
+*/
+
+.sm-link{
+  --smLinkLineColor: #2467be;
+  --smLinkTextColor: #2467be;
+  --smLinkTextColorHover: #2467be;
+}
+
+.sm-link_bg{
+  --smLinkTextColorHover: #fff;
+}
+
+
+.section:nth-child(2n+2){
+   background-color: #f1f4fa;
+}
+
+.section__item{
+  margin: auto;
+}
+
+.textbr{
+  margin-left: 25px;
+}
+
+/*
+.divpro {
+  background-color: rgb(22, 111, 146);
+  padding: 20px;
+  display: none;
+}
+  
+.spanpro:hover + .divpro {
+  display: block;
+}
+*/
